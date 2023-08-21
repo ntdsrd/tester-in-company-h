@@ -1,0 +1,12 @@
+1. Install allure commandline by npm
+- npm install -g allure-commandline
+
+2. Open cmd in this directory
+- ...\resful_booker_postman\allure
+Example: C:\Users\nguyen.dat\OneDrive - HCL Technologies Ltd\Documents\api_testing\NguyenDat_APITesting_170323\resful_booker_postman\allure
+
+3. Open allure report of prod environment
+- allure open prod\allure-report
+
+4. Open allure report of pre prod environment
+- allure open pre_prod\allure-report

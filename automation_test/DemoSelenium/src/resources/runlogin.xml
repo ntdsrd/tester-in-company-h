@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="LoginTC" thread-count="2" parallel="false">
+    <test name="Run on Chrome">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="url" value="https://fnb.kiotviet.vn/autotest111"/>
+        <classes>
+            <class name="LoginTC"/>
+            <class name="LoginTC_01"/>
+        </classes>
+    </test>
+
+</suite>

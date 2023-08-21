@@ -1,0 +1,12 @@
+<?xml version='1.0'?>
+<booking>
+    <firstname>dat</firstname>
+    <lastname>the</lastname>
+    <totalprice>3920</totalprice>
+    <depositpaid>true</depositpaid>
+    <bookingdates>
+        <checkin>2023-01-01</checkin>
+        <checkout>2023-09-03</checkout>
+    </bookingdates>
+    <additionalneeds>caphe</additionalneeds>
+</booking>

@@ -1,0 +1,121 @@
+{
+  "uid" : "edeb5bb1bcd35a97",
+  "name" : "POST: CreateBookingJSON",
+  "fullName" : "RequestJSON.CreateBookingJSON",
+  "historyId" : "8e50d263075278a3010ef7f2feae3642",
+  "time" : {
+    "start" : 1679587970467,
+    "stop" : 1679587972275,
+    "duration" : 1808
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ {
+    "name" : "AfterTest",
+    "time" : {
+      "start" : 1679587977837,
+      "stop" : 1679587977844,
+      "duration" : 7
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "AfterTest",
+    "time" : {
+      "start" : 1679587977845,
+      "stop" : 1679587977845,
+      "duration" : 0
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "RequestJSON"
+  }, {
+    "name" : "testClass",
+    "value" : "RequestJSON"
+  }, {
+    "name" : "testMethod",
+    "value" : "CreateBookingJSON"
+  }, {
+    "name" : "parentSuite",
+    "value" : "environment"
+  }, {
+    "name" : "suite",
+    "value" : "prod_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "RequestJSON"
+  }, {
+    "name" : "host",
+    "value" : "LP-J5NFZH3"
+  }, {
+    "name" : "thread",
+    "value" : "5572@LP-J5NFZH3.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "additionalneeds",
+    "value" : "buncha"
+  }, {
+    "name" : "additionalneeds_update",
+    "value" : "trada"
+  }, {
+    "name" : "auth",
+    "value" : "Basic YWRtaW46cGFzc3dvcmQxMjM="
+  }, {
+    "name" : "checkin",
+    "value" : "2023-02-12"
+  }, {
+    "name" : "checkout",
+    "value" : "2023-12-31"
+  }, {
+    "name" : "depositpaid",
+    "value" : "true"
+  }, {
+    "name" : "firstname",
+    "value" : "dat"
+  }, {
+    "name" : "lastname",
+    "value" : "nguyen"
+  }, {
+    "name" : "totalprice",
+    "value" : "6334"
+  }, {
+    "name" : "url",
+    "value" : "https://restful-booker.herokuapp.com/booking/"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "edeb5bb1bcd35a97.json",
+  "parameterValues" : [ "buncha", "trada", "Basic YWRtaW46cGFzc3dvcmQxMjM=", "2023-02-12", "2023-12-31", "true", "dat", "nguyen", "6334", "https://restful-booker.herokuapp.com/booking/" ]
+}

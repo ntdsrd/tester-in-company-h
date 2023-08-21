@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"aec36c3a6048e92f88ad90382f3b11df","name":"XMLFormat","statistic":{"failed":1,"broken":0,"skipped":0,"passed":2,"unknown":0,"total":3}},{"uid":"d5da64ee86931f819dd05fc178d416e7","name":"JSONFormat","statistic":{"failed":0,"broken":0,"skipped":0,"passed":3,"unknown":0,"total":3}}]}

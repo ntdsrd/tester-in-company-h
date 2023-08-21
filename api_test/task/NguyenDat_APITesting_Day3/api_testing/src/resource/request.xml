@@ -1,0 +1,7 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="suite">
+    <suite-files>
+        <suite-file path="request_json.xml"/>
+        <suite-file path="request_xml.xml"/>
+    </suite-files>
+</suite>

@@ -1,0 +1,65 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "The following asserts failed:\n\texpected [dat] but found [huong],\n\texpected [trada] but found [buncha]",
+      "children" : [ {
+        "name" : "AfterTest",
+        "uid" : "4c3192d81e3a28d0",
+        "parentUid" : "a5443b721e150fce9cc107aef69521fd",
+        "status" : "failed",
+        "time" : {
+          "start" : 1679588228322,
+          "stop" : 1679588228322,
+          "duration" : 0
+        },
+        "flaky" : true,
+        "parameters" : [ "buncha", "buncha", "Basic YWRtaW46cGFzc3dvcmQxMjM=", "2023-02-12", "2023-09-03", "false", "huong", "nguyen", "6334", "https://restful-booker.herokuapp.com/booking/" ]
+      }, {
+        "name" : "AfterTest",
+        "uid" : "7d9d5b7924042dc0",
+        "parentUid" : "a5443b721e150fce9cc107aef69521fd",
+        "status" : "failed",
+        "time" : {
+          "start" : 1679588228328,
+          "stop" : 1679588228330,
+          "duration" : 2
+        },
+        "flaky" : true,
+        "parameters" : [ "buncha", "buncha", "Basic YWRtaW46cGFzc3dvcmQxMjM=", "2023-02-12", "2023-09-03", "false", "huong", "nguyen", "6334", "https://restful-booker.herokuapp.com/booking/" ]
+      } ],
+      "uid" : "a5443b721e150fce9cc107aef69521fd"
+    }, {
+      "name" : "The following asserts failed:\n\texpected [trada] but found [caphe],\n\texpected [nguyen] but found [nguyen the]",
+      "children" : [ {
+        "name" : "AfterTest",
+        "uid" : "9a6f7de2dc956a3",
+        "parentUid" : "9bbbc6d74090594c4adad2ae7cead0f2",
+        "status" : "failed",
+        "time" : {
+          "start" : 1679588323092,
+          "stop" : 1679588323093,
+          "duration" : 1
+        },
+        "flaky" : true,
+        "parameters" : [ "buncha", "caphe", "Basic YWRtaW46cGFzc3dvcmQxMjM=", "2023-01-01", "2023-09-03", "true", "dat", "nguyen the", "3112", "https://restful-booker.herokuapp.com/booking/" ]
+      }, {
+        "name" : "AfterTest",
+        "uid" : "10528d44edde7616",
+        "parentUid" : "9bbbc6d74090594c4adad2ae7cead0f2",
+        "status" : "failed",
+        "time" : {
+          "start" : 1679588323101,
+          "stop" : 1679588323101,
+          "duration" : 0
+        },
+        "flaky" : true,
+        "parameters" : [ "buncha", "caphe", "Basic YWRtaW46cGFzc3dvcmQxMjM=", "2023-01-01", "2023-09-03", "true", "dat", "nguyen the", "3112", "https://restful-booker.herokuapp.com/booking/" ]
+      } ],
+      "uid" : "9bbbc6d74090594c4adad2ae7cead0f2"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

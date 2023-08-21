@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="environment">
+    <test name="pre_prod_test">
+        <parameter name="url" value="https://restful-booker.herokuapp.com/booking/"/>
+        <parameter name="auth" value="Basic YWRtaW46cGFzc3dvcmQxMjM="/>
+        <parameter name="firstname" value="dat"/>
+        <parameter name="lastname" value="nguyen the"/>
+        <parameter name="totalprice" value="3112"/>
+        <parameter name="depositpaid" value="true"/>
+        <parameter name="checkin" value="2023-01-01"/>
+        <parameter name="checkout" value="2023-09-03"/>
+        <parameter name="additionalneeds" value="buncha"/>
+        <parameter name="additionalneeds_update" value="caphe"/>
+        <groups>
+            <run>
+                <include name="PreProd"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="RequestJSON"/>
+            <class name="RequestXML"/>
+        </classes>
+    </test>
+</suite>

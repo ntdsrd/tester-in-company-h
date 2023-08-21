@@ -1,0 +1,368 @@
+{
+	"info": {
+		"_postman_id": "8b2f488c-c347-4efb-a71f-85668b2d205c",
+		"name": "restful-booker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "JSONFormat",
+			"item": [
+				{
+					"name": "CreateBookingJSON",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//validate status code\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"//get booking id\r",
+									"pm.environment.set(\"id\", pm.response.json().bookingid);\r",
+									"//validation for api schema\r",
+									"var schema = JSON.parse(pm.environment.get(\"json_schema\"));\r",
+									"pm.test(\"Validate schema\", function () {\r",
+									"    pm.expect(pm.response.json().booking).to.have.jsonSchema(schema);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"{{firstname}}\",\r\n    \"lastname\": \"{{lastname}}\",\r\n    \"totalprice\": \"{{totalprice}}\",\r\n    \"depositpaid\": {{depositpaid}},\r\n    \"bookingdates\": {\r\n        \"checkin\": \"{{checkin}}\",\r\n        \"checkout\": \"{{checkout}}\"\r\n    },\r\n    \"additionalneeds\": \"{{additionalneeds}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/booking",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBookingJSON",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//validate status code\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"//validate first name\r",
+									"pm.test(\"First name is correct\", function () {\r",
+									"    pm.expect(pm.response.json().firstname).to.eql(pm.environment.get(\"firstname\"));\r",
+									"});\r",
+									"//validate last name\r",
+									"pm.test(\"Last name is correct\", function () {\r",
+									"    pm.expect(pm.response.json().lastname).to.eql(pm.environment.get(\"lastname\"));\r",
+									"});\r",
+									"//validation for api schema\r",
+									"var schema = JSON.parse(pm.environment.get(\"json_schema\"));\r",
+									"pm.test(\"Validate schema\", function () {\r",
+									"    pm.expect(pm.response.json()).to.have.jsonSchema(schema);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/booking/{{id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"booking",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateBookingJSON",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//validate information as needs\r",
+									"pm.test(\"Additional Needs is correct\", function () {\r",
+									"    pm.expect(pm.response.json().additionalneeds).to.eql(pm.environment.get(\"additionalneeds_update\"));\r",
+									"});\r",
+									"//validation for api schema\r",
+									"var schema = JSON.parse(pm.environment.get(\"json_schema\"));\r",
+									"pm.test(\"Validate schema\", function () {\r",
+									"    pm.expect(pm.response.json()).to.have.jsonSchema(schema);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"{{firstname}}\",\r\n    \"lastname\": \"{{lastname}}\",\r\n    \"totalprice\": \"{{totalprice}}\",\r\n    \"depositpaid\": {{depositpaid}},\r\n    \"bookingdates\": {\r\n        \"checkin\": \"{{checkin}}\",\r\n        \"checkout\": \"{{checkout}}\"\r\n    },\r\n    \"additionalneeds\": \"{{additionalneeds_update}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/booking/{{id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"booking",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "XMLFormat",
+			"item": [
+				{
+					"name": "CreateBookingXML",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//validate status code\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"var response = xml2Json(responseBody);\r",
+									"//get booking id\r",
+									"pm.environment.set(\"id\", response[\"created-booking\"][\"bookingid\"]);\r",
+									"//validation for api schema\r",
+									"var schema = pm.environment.get(\"xml_schema\");\r",
+									"var xml = pm.response.text();\r",
+									"pm.test(\"Validate schema\", function () {\r",
+									"    pm.expect(tv4.validate(xml,schema)).to.be.true;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml",
+								"type": "default"
+							},
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<booking>\r\n    <firstname>{{firstname}}</firstname>\r\n    <lastname>{{lastname}}</lastname>\r\n    <totalprice>{{totalprice}}</totalprice>\r\n    <depositpaid>{{depositpaid}}</depositpaid>\r\n    <bookingdates>\r\n        <checkin>{{checkin}}</checkin>\r\n        <checkout>{{checkout}}</checkout>\r\n    </bookingdates>\r\n    <additionalneeds>{{additionalneeds}}</additionalneeds>\r\n</booking>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/booking",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBookingXML",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//validate status code\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"var response = xml2Json(responseBody);\r",
+									"//validate first name\r",
+									"pm.test(\"First name is correct\", function () {\r",
+									"    var firstname = response['booking']['firstname'];\r",
+									"    pm.expect(firstname).to.eql(pm.environment.get(\"firstname\"));\r",
+									"});\r",
+									"//validate last name\r",
+									"pm.test(\"Last name is correct\", function () {\r",
+									"    var lastname = response['booking']['lastname'];\r",
+									"    pm.expect(lastname).to.eql(pm.environment.get(\"lastname\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/booking/{{id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"booking",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateBookingXML",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//validate information as needs\r",
+									"var response = xml2Json(responseBody);\r",
+									"pm.test(\"Additional Needs is correct\", function () {\r",
+									"    var additionalNeeds = response['booking']['additionalneeds'];\r",
+									"    pm.expect(additionalNeeds).to.eql(pm.environment.get(\"additionalneeds_update\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml",
+								"type": "default"
+							},
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<booking>\r\n    <firstname>{{firstname}}</firstname>\r\n    <lastname>{{lastname}}</lastname>\r\n    <totalprice>{{totalprice}}</totalprice>\r\n    <depositpaid>{{depositpaid}}</depositpaid>\r\n    <bookingdates>\r\n        <checkin>{{checkin}}</checkin>\r\n        <checkout>{{checkout}}</checkout>\r\n    </bookingdates>\r\n    <additionalneeds>{{additionalneeds_update}}</additionalneeds>\r\n</booking>"
+						},
+						"url": {
+							"raw": "{{url}}/booking/{{id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"booking",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{password}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{username}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

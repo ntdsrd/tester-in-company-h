@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="suite_xml">
+    <test name="test_xml">
+        <classes>
+            <class name="test.RequestXML"/>
+        </classes>
+    </test>
+</suite>

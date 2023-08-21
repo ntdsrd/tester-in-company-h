@@ -1,0 +1,9 @@
+Username,UserRole,EmployeeName,Status,Action
+phungnk1,ESS,Fiona Grace,Enabled,Delete
+Nguyen Van A,Admin,Fiona Grace,Disabled,Add
+hannah.flores,ESS,Hannah Flores,Enabled,Delete
+Nguyen Van B,ESS,Hannah Flores,Enabled,Add
+jasmine.morgan,Admin,Jassmine Morgan,Enabled,Delete
+Nguyen Van C,ESS,Jassmine Morgan,Disabled,Add
+john.smith,ESS,John Smith,Enabled,Delete
+Nguyen Van D,Admin,John Smith,Enabled,Add
