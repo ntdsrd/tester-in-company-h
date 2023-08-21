@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite thread-count="3"  name="Suite Login" parallel = "tests">
+    <test name="Run on Chrome">
+        <parameter name="browser" value = "Chrome"></parameter>
+        <parameter name="url" value="https://fnb.kiotviet.vn/autotest111"></parameter>
+        <classes>
+            <class name="PhongBan.PhongBanTCs"/>
+        </classes>
+
+    </test>
+    <test name="Run on EDGE">
+        <parameter name="browser" value = "EDGE"></parameter>
+        <parameter name="url" value="https://fnb.kiotviet.vn/autotest111"></parameter>
+        <classes>
+            <class name="PhongBan.PhongBanTCs"/>
+        </classes>
+
+    </test>
+    <test name="Run on FRIREFOX">
+        <parameter name="browser" value = "EDGE"></parameter>
+        <parameter name="url" value="https://fnb.kiotviet.vn/autotest111"></parameter>
+        <classes>
+            <class name="PhongBan.PhongBanTCs"/>
+        </classes>
+
+    </test>
+</suite>
