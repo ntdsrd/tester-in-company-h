@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ThemHangHoa" parallel="true">
+    <test name="ThemHangHoa">
+        <parameter name="browser" value="Edge"></parameter>
+        <parameter name="url" value="https://fnb.kiotviet.vn/Login"></parameter>
+        <classes>
+            <class name="test_case.hang_hoa.danh_muc.ThemHangHoaTestCase"/>
+        </classes>
+    </test>
+</suite>

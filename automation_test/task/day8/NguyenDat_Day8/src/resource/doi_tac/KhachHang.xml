@@ -1,0 +1,7 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite thread-count="2" name="KhachHang" parallel="tests">
+    <suite-files>
+        <suite-file path="khach_hang/ThemKhachHang.xml"/>
+        <suite-file path="khach_hang/ThemNhomKhachHang.xml"/>
+    </suite-files>
+</suite>

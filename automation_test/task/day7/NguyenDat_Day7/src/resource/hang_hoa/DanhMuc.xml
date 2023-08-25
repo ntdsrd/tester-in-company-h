@@ -1,0 +1,7 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="DanhMuc" parallel="tests" thread-count="2">
+    <suite-files>
+        <suite-file path="danh_muc/TimKiem.xml"/>
+        <suite-file path="danh_muc/ThemHangHoa.xml"/>
+    </suite-files>
+</suite>

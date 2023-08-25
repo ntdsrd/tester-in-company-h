@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ThemKhuVuc" parallel="true">
+    <test name="ThemKhuVuc">
+        <parameter name="browser" value="Edge"></parameter>
+        <parameter name="url" value="https://fnb.kiotviet.vn/Login"></parameter>
+        <classes>
+            <class name="test_case.phong_ban.ThemKhuVucTestCase"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="NhaCungCap">
+    <suite-files>
+        <suite-file path="nha_cung_cap/ThemNhaCungCap.xml"/>
+        <suite-file path="nha_cung_cap/ThemNhomNhaCungCap.xml"/>
+        <suite-file path="nha_cung_cap/CapNhatNhaCungCap.xml"/>
+    </suite-files>
+</suite>

@@ -1,0 +1,7 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite thread-count="2" name="PhongBan" parallel="tests">
+    <suite-files>
+        <suite-file path="phong_ban/TimKiem.xml"/>
+        <suite-file path="phong_ban/ThemKhuVuc.xml"/>
+    </suite-files>
+</suite>

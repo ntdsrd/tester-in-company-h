@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite thread-count="2" name="ThemKhuVuc" parallel="tests">
+    <test name="Run on Edge">
+        <parameter name="browser" value="Edge"></parameter>
+        <parameter name="url" value="https://fnb.kiotviet.vn/Login"></parameter>
+        <classes>
+            <class name="test_case.phong_ban.ThemKhuVucTestCase"/>
+        </classes>
+    </test>
+    <test name="Run on Chrome">
+        <parameter name="browser" value="Chrome"></parameter>
+        <parameter name="url" value="https://fnb.kiotviet.vn/Login"></parameter>
+        <classes>
+            <class name="test_case.phong_ban.ThemKhuVucTestCase"/>
+        </classes>
+    </test>
+</suite>

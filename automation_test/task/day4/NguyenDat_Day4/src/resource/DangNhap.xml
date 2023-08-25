@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="DangNhap" parallel="true">
+    <test name="Run on Edge">
+        <parameter name="browser" value="Edge"></parameter>
+        <parameter name="url" value="https://fnb.kiotviet.vn/Login"></parameter>
+        <classes>
+            <class name="test_case.dang_nhap.DangNhapTestCase"/>
+        </classes>
+    </test>
+</suite>
